@@ -1,2 +1,2 @@
 # Java
-Java projects
+Here you’ll find various Java projects I’ve developed.
