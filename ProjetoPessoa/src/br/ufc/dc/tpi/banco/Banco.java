@@ -5,8 +5,15 @@ import br.ufc.dc.tpi.banco.contas.ContaCorrente;
 import br.ufc.dc.tpi.banco.contas.ContaPoupança;
 import br.ufc.dc.tpi.banco.contas.ContaEspecial;
 import br.ufc.dc.tpi.banco.contas.IRepositorioConta;
+<<<<<<< HEAD
+import br.ufc.dc.tpi.exceptions.CIException;
+import br.ufc.dc.tpi.exceptions.SIException;
+
+//essa classe cria o banco. Ele implementa a interface de banco IBanco. Além disso qualquer tipo de conta que implemente do repositorio IRepositorioConta pode ser passada como parâmetro
+=======
 
 //essa classe cria o banco. Ele implementa a interface de banco IBanco. Além disso qualquer tipo de conta que implemente do repositorio IRepositorioConta pode ser passada como parâmetro do construtor
+>>>>>>> 516f81b1a13cb43b70705e72c740f9aa703e2d8b
 public class Banco implements IBanco{
 	
 	private IRepositorioConta contas;
@@ -45,11 +52,29 @@ public class Banco implements IBanco{
 		return contas.procurar(numero);
 	}
 	
+<<<<<<< HEAD
+	public void creditar(String numero, double valor) throws CIException {
+=======
 	public void creditar(String numero, double valor) {
+>>>>>>> 516f81b1a13cb43b70705e72c740f9aa703e2d8b
 		ContaAbstrata conta = procurar(numero);
 		if(conta != null) {
 			conta.creditar(valor);
 		} else {
+<<<<<<< HEAD
+			throw new CIException(numero);
+		}
+	}
+	
+	public void debitar(String numero, double valor) throws CIException, SIException {
+		ContaAbstrata conta = procurar(numero);
+		if(conta != null && conta.saldo() >= valor) {
+			conta.debitar(valor);
+		} else if (conta == null) {
+			throw new CIException(numero);
+		} else if (conta.saldo() < valor) {
+			throw new SIException(numero, conta.saldo());
+=======
 			System.out.println("A conta não foi encontrada no sistema!");
 		}
 	}
@@ -60,6 +85,7 @@ public class Banco implements IBanco{
 			conta.debitar(valor);
 		} else {
 			System.out.println("A conta não foi encontrada no sistema!");
+>>>>>>> 516f81b1a13cb43b70705e72c740f9aa703e2d8b
 		}
 	}
 	

@@ -1,6 +1,10 @@
 package br.ufc.dc.tpi.banco.contas;
 
+<<<<<<< HEAD
+//classe abstrata de onde as classes Conta... herdam suas funcionalidades. Seus filhos são as classes ContaCorrente e ContaPoupança
+=======
 //classe abstrata de onde as classes Conta... herdam suas funcionalidades. Seus filhos são as classes ContaCorrente e ContaImposto
+>>>>>>> 516f81b1a13cb43b70705e72c740f9aa703e2d8b
 public abstract class ContaAbstrata {
 
 	   protected String numero;
