@@ -2,7 +2,10 @@ package br.ufc.dc.tpi.banco.contas;
 
 import java.util.Vector;
 
+<<<<<<< HEAD
+=======
 //vetor de contas
+>>>>>>> 516f81b1a13cb43b70705e72c740f9aa703e2d8b
 public class VectorConta implements IRepositorioConta{
 
 	private Vector<ContaAbstrata> contas = new Vector<ContaAbstrata>();
